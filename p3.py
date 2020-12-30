@@ -1,7 +1,7 @@
 n = 600851475143
 
 def split(n:int):
-    for i in range(2, n-1, 1):
+    for i in range(2, int(n**(1/2.0)), 1):
         if (n/i) % 1 == 0:
             return i, int(n/i)
     return n, 1
@@ -18,5 +18,3 @@ def primes(n:int) -> list:
     return factor([n])
 
 print(max(primes(n)))
-
-# whatever, it works.
